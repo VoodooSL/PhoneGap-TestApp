@@ -1,0 +1,18 @@
+﻿<widget id="com.voodoo.test" version="0.0.1">
+  <name>TestApp</name>
+  <description>
+    A test app to try out a few native features
+  </description>
+  <author email="monkey.wonder@voodoo-sl.com" href="https://voodoo.community">
+    Voodoo
+  </author>
+  <content src="index.html" />
+  <access origin="*" />
+  <preference name="Fullscreen" value="true" />
+  <preference name="Orientation" value="landscape" />
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackgroundColor" value="0xff0000ff"/>
+  <feature name="Device">
+    <param name="android-package" value="org.apache.cordova.vibration" />
+  </feature>  
+</widget>

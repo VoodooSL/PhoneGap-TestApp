@@ -1,4 +1,7 @@
-﻿<widget id="com.voodoo.test" version="0.0.1">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<widget id="com.voodoo.test" version="0.0.1" xmlns= "http://www.w3.org/ns/widgets" xmlns:gap = "http://phonegap.com/ns/1.0">
+  
   <name>TestApp</name>
   <description>
     A test app to try out a few native features
@@ -8,11 +11,13 @@
   </author>
   <content src="index.html" />
   <access origin="*" />
+
+  <preference name="permissions"                value="none"/>
+  
   <preference name="Fullscreen" value="true" />
   <preference name="Orientation" value="landscape" />
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="BackgroundColor" value="0xff0000ff"/>
-  <feature name="Device">
-    <param name="android-package" value="org.apache.cordova.vibration" />
-  </feature>  
+  
+  <gap:plugin name="org.apache.cordova.vibration" /> 
 </widget>

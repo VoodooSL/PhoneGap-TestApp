@@ -3,6 +3,7 @@
 };
 
 function onError(error) {
+    $('#heading').text(error.code);
 };
 
 $(function () {
@@ -10,8 +11,7 @@ $(function () {
         navigator.vibrate(3000);
     });
 
-    var timer = $.timer(function () {
-        navigator.compass.getCurrentHeading(onSuccess, onError);
-    });
-    timer.set({ time: 1000, autostart: true });
+    navigator.compass.watchHeading(
+        onSuccess,
+        onError, { frequency: 1000 });
 });

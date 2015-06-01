@@ -6,7 +6,9 @@ function onError(error) {
     $('#heading').text(error.code);
 };
 
-$(function () {
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
     $('#btn').click(function () {
         navigator.vibrate(3000);
     });
@@ -14,4 +16,4 @@ $(function () {
     navigator.compass.watchHeading(
         onSuccess,
         onError, { frequency: 1000 });
-});
+}

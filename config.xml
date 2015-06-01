@@ -20,5 +20,5 @@
   <preference name="BackgroundColor" value="0xff0000ff"/>
   
   <gap:plugin name="org.apache.cordova.vibration" />
-  <gap:plugin name="org.apache.cordova.deviceorientation" />
+  <gap:plugin name="org.apache.cordova.device-orientation" version="0.3.9" />
 </widget>
